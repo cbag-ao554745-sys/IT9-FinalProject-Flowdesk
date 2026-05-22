@@ -11,11 +11,6 @@ export default defineConfig({
         tailwindcss(),
     ],
     build: {
-        outDir: 'dist',
-    },
-    preview: {
-        allowedHosts: ['it9-finalproject-flowdesk.onrender.com'],
-        host: '0.0.0.0',
-        port: 10000,
+        outDir: 'public/build',
     },
 });
