@@ -9,13 +9,13 @@
 <div class="flex items-center justify-between mb-6">
     <div>
         <h1 class="text-xl font-bold text-white">
-            Good {{ now()->hour < 12 ? 'morning' : (now()->hour < 18 ? 'afternoon' : 'evening') }},
-            {{ explode(' ', auth()->user()->name)[0] }} 👋
+            Good {{ now()->hour < 12 ? 'Morning' : (now()->hour < 18 ? 'Afternoon' : 'Evening') }}
+            {{ explode(' ', auth()->user()->Admin)[0] }} 👋
         </h1>
         <p class="text-sm text-gray-400 mt-1">{{ now()->format('l, F j, Y') }}</p>
     </div>
     <a href="{{ route('projects.create') }}"
-       class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-700">
+       class="flex items-center gap-2 px-4 py-2 bg-indigo-800 text-white-300 text-sm font-medium rounded-lg hover:bg-gray-700">
         + New Project
     </a>
 </div>
@@ -71,7 +71,7 @@
                 <span class="text-xs text-gray-500">{{ $task->due_date->format('M d') }}</span>
             </div>
             @empty
-            <p class="text-sm text-gray-500 text-center py-4">No tasks assigned to you. 🎉</p>
+            <p class="text-sm text-gray-500 text-center py-4">No tasks assigned to you. </p>
             @endforelse
         </div>
 
@@ -158,3 +158,4 @@
     </div>
 </div>
 
+@endsection

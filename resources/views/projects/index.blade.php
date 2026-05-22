@@ -111,3 +111,4 @@
 
 {{ $projects->withQueryString()->links() }}
 
+@endsection

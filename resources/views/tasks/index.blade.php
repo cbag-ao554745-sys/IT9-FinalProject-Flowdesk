@@ -146,3 +146,4 @@
 
 <div class="mt-4">{{ $tasks->withQueryString()->links() }}</div>
 
+@endsection

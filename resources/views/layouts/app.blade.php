@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<header class="h-14 bg-gray-900 border-b border-gray-800 flex items-center px-6 gap-4">
+    <h1 class="text-sm font-semibold text-white">@yield('page-title', 'Dashboard')</h1>
+    
+    <!-- This line must exist -->
+    <div class="ml-auto flex items-center gap-3">
+        @yield('page-actions')
+    </div>
+</header>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,7 +26,7 @@
 <div class="flex min-h-screen">
 
     {{-- Sidebar --}}
-    <aside class="w-56 bg-gray-900 border-r border-gray-800 flex flex-col flex-shrink-0">
+    <aside class="fixed h-screen left-0 top-0 w-56 bg-gray-900 border-r border-gray-800 flex flex-col flex-shrink-0">
 
         {{-- Logo --}}
         <div class="px-5 py-4 border-b border-gray-800">
@@ -96,7 +104,7 @@
     </aside>
 
     {{-- Main --}}
-    <div class="flex-1 flex flex-col min-w-0">
+    <div class="ml-56 flex-1 flex flex-col min-w-0">
 
         {{-- Topbar --}}
         <header class="h-14 bg-gray-900 border-b border-gray-800 flex items-center px-6 gap-4">
